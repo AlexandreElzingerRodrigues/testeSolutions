@@ -1,0 +1,70 @@
+﻿@model TesteTecnicoImobiliaria.WEB.Models.ImovelViewModel
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Imovel.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imovel.IdCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imovel.NomeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imovel.IdTipoImovel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imovel.ValorImovel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imovel.DataPublicacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imovel.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imovel.Ativo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Imoveis)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdCliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeCliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdTipoImovel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorImovel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataPublicacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ativo)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
